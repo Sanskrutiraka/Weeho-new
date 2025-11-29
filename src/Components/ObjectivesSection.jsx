@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./ObjectivesSection.css";
 
 export default function ObjectivesSection() {
+  const sectionRef = useRef(null);
+
   const objectives = [
     {
       title: "Innovation",
@@ -21,24 +23,44 @@ export default function ObjectivesSection() {
     },
   ];
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            sectionRef.current.classList.add("show");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) observer.observe(sectionRef.current);
+  }, []);
+
   return (
-    <section className="objectives-section">
-      <h2>Key Objectives</h2>
+    <section className="objectives-section hidden-section" ref={sectionRef}>
+      <h2 className="objectives-title">Key Objectives</h2>
       <p className="objectives-intro">
         Our mission is to connect creativity and opportunity — helping performers
         shine and audiences enjoy unforgettable events.
       </p>
 
       <div className="objectives-container">
-        {objectives.map((obj, index) => (
-          <div className="objective-box" key={index}>
-            <div className="icon">⭐</div>
-            <h3>{obj.title}</h3>
-            <p>{obj.text}</p>
-            <span className="step-number">{`0${index + 1}`}</span>
-          </div>
-        ))}
-      </div>
+  {objectives.map((obj, index) => (
+    <div
+      className={`objective-box`}       // ← yaha replace kar do
+      style={{ animationDelay: `${0.2 + index * 0.2}s` }}  // ← add ye
+      key={index}
+    >
+      <div className="icon">⭐</div>
+      <h3>{obj.title}</h3>
+      <p>{obj.text}</p>
+      <span className="step-number">{`0${index + 1}`}</span>
+    </div>
+  ))}
+</div>
+
     </section>
   );
 }
