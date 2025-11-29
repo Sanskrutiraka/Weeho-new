@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+
 import "./PopularCustomers.css";
 import performer1 from "../../assets/performer1.jpg";
 import performer2 from "../../assets/performer2.jpg";
 
 const TESTIMONIALS = [
+
   {
     name: "Tanisha Bansal",
     role: "Storyteller",
@@ -40,6 +42,23 @@ export default function PopularCustomers() {
       setSlide("slide-in-left");
     }, 300);
   };
+  const sectionRef = useRef(null);
+
+useEffect(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          sectionRef.current.classList.add("pc-show");
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  if (sectionRef.current) observer.observe(sectionRef.current);
+}, []);
+
 
   // ✅ Auto slide every 4 seconds
   useEffect(() => {
@@ -50,7 +69,8 @@ export default function PopularCustomers() {
   const item = TESTIMONIALS[index];
 
   return (
-    <section className="pc-section">
+   <section className="pc-section pc-hidden" ref={sectionRef}>
+
       <h1 className="pc-title">Reviews From Performers</h1>
 
       <div className="pc-slider">

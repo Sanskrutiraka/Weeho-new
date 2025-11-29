@@ -96,6 +96,52 @@ body {
   right: 2%;
 }
 
+
+/* Scroll Animation */
+.ue-section.scroll-hidden {
+  opacity: 0;
+  transform: translateY(80px);
+}
+
+.scroll-show.ue-section {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 4.2s ease-out;
+}
+
+
+/* Card Stagger Animation */
+.scroll-show .ue-card {
+  opacity: 0;
+  animation: cardReveal 4.4s ease-out forwards; /* SLOWER */
+}
+
+.scroll-show .ue-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.scroll-show .ue-card:nth-child(2) {
+  animation-delay: 1s;
+}
+.scroll-show .ue-card:nth-child(3) {
+  animation-delay: 1.6s;
+}
+.scroll-show .ue-card:nth-child(4) {
+  animation-delay: 2.2s;
+}
+
+/* Keyframes slow */
+@keyframes cardReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.85) translateY(55px); /* Softer start */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+
 /* Responsive */
 @media (max-width: 992px) {
   .ue-slider {

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+
 import { useNavigate } from "react-router-dom";
 import "./UniqueEventSlider.css";
 import event1 from "../assets/event1.jpg";
@@ -7,6 +8,23 @@ import event2 from "../assets/event2.jpg";
 
 function UniqueEventSlider() {
   const navigate = useNavigate();
+  const wrapperRef = useRef(null);
+
+useEffect(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          wrapperRef.current.classList.add("scroll-show");
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  if (wrapperRef.current) observer.observe(wrapperRef.current);
+}, []);
+
 
   const eventList = [
     { id: "music-night", img: event1, title: "Music Night Event" },
@@ -46,10 +64,13 @@ function UniqueEventSlider() {
   return (
     <>
     
-    <div className="ue-section">
+    <div className="ue-section scroll-hidden" ref={wrapperRef}>
+
       <h2 className="ue-title">Our Events</h2>
 
-      <div className="ue-wrapper">
+    <div className="ue-wrapper" ref={wrapperRef}>
+
+
         <button className="ue-btn ue-prev" onClick={goPrev}>❮</button>
 
         <div className="ue-slider">

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
+
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -25,13 +27,14 @@ function Navbar() {
 
       {/* Nav Links */}
       <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
-        <a href="/">Home</a>
-        <a href="#">About</a>
-        <a href="#">Book An Event</a>
-        <a href="/our-team">Our Team</a>
-        <a href="/blogs">Blog</a>
-        <a href="#">Contact</a>
-      </nav>
+  <Link to="/">Home</Link>
+  <Link to="/weeho-details">About</Link>
+  <a href="#">Book An Event</a>
+  <Link to="/our-team">Our Team</Link>
+  <Link to="/blogs">Blog</Link>
+  <a href="#">Contact</a>
+</nav>
+
 
       {/* Buttons */}
       <div className="nav-buttons">

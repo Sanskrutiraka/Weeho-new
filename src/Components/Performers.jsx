@@ -1,10 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./Performers.css";
 import "./PerformerPage.css"; // ✅ reuse same performer page styling
 import performer1 from "../assets/performer1.jpg";
 import performer2 from "../assets/performer2.jpg";
 
+
+
 function Performers() {
+  const slideRef = useRef(null);
+
+useEffect(() => {
+  const handleScroll = () => {
+    if (!slideRef.current) return;
+
+    const top = slideRef.current.getBoundingClientRect().top;
+    const trigger = window.innerHeight - 50;
+
+    if (top < trigger) {
+      slideRef.current.classList.add("slider-animate-performer");
+      slideRef.current.classList.remove("slider-hidden-performer");
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  handleScroll();
+
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
   const performers = [
     {
       name: "Tanisha Bansal",
@@ -59,7 +82,8 @@ function Performers() {
     <div className="performers-section">
       <h2 className="performers-title">Our Performers</h2>
 
-      <div className="performer-slider-wrapper">
+      <div className="performer-slider-wrapper slider-hidden-performer" ref={slideRef}>
+
         <button className="nav-btn prev" onClick={prevSlide}>
           ❮
         </button>
