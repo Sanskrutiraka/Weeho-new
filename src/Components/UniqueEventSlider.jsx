@@ -55,14 +55,18 @@ function UniqueEventSlider() {
         <div className="ue-slider">
           {eventList.slice(curr, curr + 4).map((item, index) => (
             <div
-              className="ue-card"
-              key={index}
-              onClick={() => navigate(`/event/${item.id}`)}
-              style={{ cursor: "pointer" }}
-            >
-              <img src={item.img} alt={item.title} />
-              <h3>{item.title}</h3>
-            </div>
+  className="ue-card"
+  key={index}
+  onClick={() => {
+    navigate(`/event/${item.id}`);
+    window.scrollTo(0, 0); // Scroll to top after navigation
+  }}
+  style={{ cursor: "pointer" }}
+>
+  <img src={item.img} alt={item.title} />
+  <h3>{item.title}</h3>
+</div>
+
           ))}
         </div>
 
