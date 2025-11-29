@@ -161,14 +161,20 @@ body {
   gap: 8px;
   justify-content: center;
 }
-.pc-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: 1px solid rgba(20, 40, 70, 0.12);
-  background: transparent;
-  cursor: pointer;
+button.pc-dot {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  border: 2px solid var(--muted-blue) !important;
+  padding: 0 !important;
+  min-width: 0 !important;
 }
+
+button.pc-dot.active {
+  width: 8px !important;
+  height: 8px !important;
+}
+
 .pc-dot.active {
   background: var(--purple);
   border-color: var(--purple);
