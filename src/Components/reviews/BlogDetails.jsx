@@ -1,6 +1,8 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./PopularBlogPosts.css";
+import Navbar from "../Navbar";
+import Footer from "../Footer";
 
 export default function BlogDetails() {
   const location = useLocation();
@@ -17,15 +19,17 @@ export default function BlogDetails() {
   }
 
   return (
+    <>
+      <Navbar />
     <div className="blog-details-page">
-      <button className="back-btn" onClick={() => navigate(-1)}>
-        ← Back
-      </button>
+    
 
       <img src={blog.image} alt={blog.title} className="blog-details-img" />
       <h2 className="blog-details-title">{blog.title}</h2>
       <p className="blog-details-category">{blog.category}</p>
       <p className="blog-details-content">{blog.content}</p>
     </div>
+    <Footer />
+    </>
   );
 }

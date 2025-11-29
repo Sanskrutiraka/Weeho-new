@@ -1,6 +1,7 @@
 .blog-section {
   text-align: center;
   padding: 60px 20px;
+  margin-top: 70px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -72,6 +73,7 @@
   width: 100%;
   min-height: 100vh;
   background: #fff;
+  margin-top: 100px;
   padding: 40px 25%;
   overflow-y: auto; /* allow scroll but hide bar */
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -86,18 +88,7 @@
   scrollbar-width: none;
 }
 
-/* Back button */
-.back-btn {
-  background: none;
-  border: none;
-  font-size: 1.1rem;
-  color: #1f2d5a;
-  cursor: pointer;
-  margin-bottom: 20px;
-}
-.back-btn:hover {
-  color: #e74c3c;
-}
+
 
 /* Blog image */
 .blog-details-img {
