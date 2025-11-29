@@ -4,6 +4,7 @@ import "./UniqueEventSlider.css";
 import event1 from "../assets/event1.jpg";
 import event2 from "../assets/event2.jpg";
 
+
 function UniqueEventSlider() {
   const navigate = useNavigate();
 
@@ -43,6 +44,8 @@ function UniqueEventSlider() {
   };
 
   return (
+    <>
+    
     <div className="ue-section">
       <h2 className="ue-title">Our Events</h2>
 
@@ -66,6 +69,7 @@ function UniqueEventSlider() {
         <button className="ue-btn ue-next" onClick={goNext}>❯</button>
       </div>
     </div>
+    </>
   );
 }
 

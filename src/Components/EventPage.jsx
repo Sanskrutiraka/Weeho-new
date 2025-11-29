@@ -4,6 +4,8 @@ import "./EventPage.css";
 
 import event1 from "../assets/event1.jpg";
 import event2 from "../assets/event2.jpg";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const eventList = [
   {
@@ -40,10 +42,10 @@ export default function EventPage() {
     );
 
   return (
+    <>
+    <Navbar/>
     <div className="event-page-container">
-      <button className="event-back-btn" onClick={() => navigate(-1)}>
-        ← Back
-      </button>
+      
 
       <div className="event-details-box">
         <img src={event.img} alt={event.title} className="event-img" />
@@ -54,5 +56,7 @@ export default function EventPage() {
         <button className="event-see-btn">See Event</button>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
