@@ -17,7 +17,6 @@ export default function WeehoDetails() {
       <AboutPage/>
       
 
-      <ObjectivesSection />
       <PopularEvent1 />
       <PopularEvent2 />
       <Footer />

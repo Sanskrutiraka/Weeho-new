@@ -29,10 +29,10 @@ function Navbar() {
       <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
   <Link to="/">Home</Link>
   <Link to="/weeho-details">About</Link>
-  <a href="#">Book An Event</a>
   <Link to="/our-team">Our Team</Link>
   <Link to="/blogs">Blog</Link>
-  <a href="#">Contact</a>
+          <Link to="/contact">Contact</Link>
+
 </nav>
 
 
@@ -46,14 +46,14 @@ function Navbar() {
         >
           Join As A Performer
         </button>
-        <button
-          className="btn signup-btn"
-          onClick={() =>
-            window.open("https://forms.gle/JqDMVxuxpYvHq34V8", "_blank")
-          }
-        >
-          Book An Event
-        </button>
+        {/*<button*/}
+        {/*  className="btn signup-btn"*/}
+        {/*  onClick={() =>*/}
+        {/*    window.open("https://forms.gle/JqDMVxuxpYvHq34V8", "_blank")*/}
+        {/*  }*/}
+        {/*>*/}
+        {/*  Book An Event*/}
+        {/*</button>*/}
       </div>
     </header>
   );

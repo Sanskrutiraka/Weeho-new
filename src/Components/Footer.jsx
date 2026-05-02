@@ -1,4 +1,5 @@
 import React from "react";
+import { HashLink } from 'react-router-hash-link';
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import "./Footer.css";
 
@@ -15,11 +16,11 @@ function Footer() {
          <div className="footer-box">
           {/* <h3>Follow Us</h3> */}
           <div className="social-icons">
-            <a href="https://wa.me/919230621729?text=Hello%20Weeho%20Team%2C%20I%20want%20to%20know%20more%20about%20your%20events."><FaWhatsapp/></a>
+            <a href="https://wa.me"><FaWhatsapp/></a>
             <a href="https://www.instagram.com/weeho_events/"><FaInstagram /></a>
-            <a href="https://www.linkedin.com/company/98126149/admin/page-posts/published/"><FaLinkedinIn /></a>
-            <a href="https://www.facebook.com/weehoevents/"><FaFacebookF /></a>
-            <a href="https://www.youtube.com/weehoevents/"><FaYoutube/></a>
+            <a href="https://www.linkedin.com"><FaLinkedinIn /></a>
+            <a href="https://www.facebook.com"><FaFacebookF /></a>
+            <a href="https://www.youtube.com"><FaYoutube/></a>
             
             
           </div>
@@ -30,10 +31,10 @@ function Footer() {
         <div className="footer-box">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/weeho-details">About Us</a></li>
+              <li><HashLink smooth to="/#events-section">Events</HashLink></li>
+            <li><a href="/contact">Contact</a></li>
             
           </ul>
         </div>

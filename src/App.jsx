@@ -26,6 +26,8 @@ import PerformerPage from "./Components/PerformerPage"; // ✅ Add this
 import BlogDetails from "./Components/reviews/BlogDetails";
 import EventPage from "./Components/EventPage";
 import BlogsPage from "./pages/BlogsPage";
+import Contact from "./pages/Contact";
+
 
 
 
@@ -52,11 +54,10 @@ function App() {
             <>
             <Navbar/>
             <Header />
-            
-             
-              <PopularEvent />
-             
-              <Event_Types />
+
+                <div id="events-section">
+                    <Event_Types />
+                </div>
               <Performers />
             <UniqueEventSlider />
 
@@ -75,6 +76,8 @@ function App() {
         <Route path="/our-team" element={<OurTeam />} />
         <Route path="/event/:id" element={<EventPage />} />
         <Route path="/blogs" element={<BlogsPage />} />
+          <Route path="/contact" element={<Contact />} />
+
 
 
 
