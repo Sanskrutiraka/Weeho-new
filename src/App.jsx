@@ -55,11 +55,12 @@ function App() {
             <Navbar/>
             <Header />
 
-                <div id="events-section">
-                    <Event_Types />
-                </div>
+                <Event_Types />
               <Performers />
-            <UniqueEventSlider />
+            <div id="events-section">
+                <UniqueEventSlider />
+            </div>
+
 
              
               <PopularCustomers />

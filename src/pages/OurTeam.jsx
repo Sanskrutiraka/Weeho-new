@@ -9,6 +9,20 @@ export default function OurTeam2() {
   const navigate = useNavigate();
 
   const teamList = [
+      {
+          name: "Akansha Samad",
+          role: "Marketing Intern",
+          image: "Akanksha_samad.jpeg",
+          about:
+          "Handle outreach, collaboration, and communication with artists and institutions. Assists in promotional activities and campaign execution to grow the platform."
+      },
+      {
+          name: "Tanisha Bansal",
+          role: " ",
+          image: "/Tanisha_bansal.jpeg",
+          about:
+            "Completed her Bachelors in Management Studies. Passionate about Indian Culture and stories. Soulful storyteller and full time student of life or life long learner."
+      },
     {
       name: "Anita Goyal",
       role: "Creative Leader",
@@ -65,6 +79,7 @@ export default function OurTeam2() {
       about:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
     },
+
   ];
 
   return (
