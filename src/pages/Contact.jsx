@@ -17,7 +17,7 @@ const ContactPage = () => {
 
             <div className="glass-card fade-in-up">
                 <div className="contact-info slide-in-left">
-                    <h2 className="title-reveal">Get in Touch</h2>
+                    <h2 className="title-reveal">Get in Touch With Us</h2>
                     <p className="description">Have an event in mind? Let’s make it happen together.</p>
 
                     <div className="info-item hover-bounce">
