@@ -32,7 +32,7 @@ function Header() {
                 <h1 className="main-heading">
                     Book Music & Comedy Events
                     <br />
-                    <span>anywhere in New York.</span>
+                    <span>anywhere in Hyd.</span>
                 </h1>
 
                 <button className="explore-btn">Search Events Near Me</button>
