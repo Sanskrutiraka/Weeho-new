@@ -30,10 +30,12 @@ function Header() {
             {/* NEW: Wrapper to stack heading and button vertically */}
             <div className="hero-content">
                 <h1 className="main-heading">
-                    Book Music & Comedy Events
+                    Where Every Moment
                     <br />
-                    <span>anywhere in Hyd.</span>
+                    <span>Connects. Engages. Inspires</span>
                 </h1>
+                <h3>We create powerful online events that brings people together,</h3>
+                <h3>spark emotions and deliver expriences that stay forever.</h3>
 
                 <button className="explore-btn">Search Events Near Me</button>
             </div>

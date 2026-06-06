@@ -17,30 +17,6 @@ const performerData = [
     img: performer2,
     desc: "Anurag Suter from Chhattisgarh — an aspiring music composer and singer, serving as the General Secretary of Swarang, the Music Society of SGTB Khalsa College.",
   },
-  {
-    name: "Sofia Lee",
-    role: "Violin Artist",
-    img: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80",
-    desc: "Sofia Lee is known for her emotional violin performances and graceful stage presence.",
-  },
-  {
-    name: "Ethan White",
-    role: "Magician",
-    img: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?cs=srgb&dl=fashion-person-woman-415829.jpg&fm=jpg",
-    desc: "Ethan White brings wonder and laughter to every show with his unique magic style.",
-  },
-  {
-    name: "Olivia Brown",
-    role: "Stand-up Comedian",
-    img: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80",
-    desc: "Olivia Brown’s sharp humor and charm make her performances truly memorable.",
-  },
-  {
-    name: "Noah James",
-    role: "DJ Performer",
-    img: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=800&q=80",
-    desc: "Noah James keeps the crowd alive with beats that make every night unforgettable.",
-  },
 ];
 
 export default function PerformerPage() {

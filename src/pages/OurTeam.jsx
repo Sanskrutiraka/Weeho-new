@@ -28,56 +28,56 @@ export default function OurTeam2() {
       role: "Creative Leader",
       image: "https://via.placeholder.com/200x200",
       about:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "",
     },
     {
       name: "Amrita Kaur",
       role: "Sales Manager",
       image: "https://via.placeholder.com/200x200",
       about:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "",
     },
     {
       name: "Akhil Sharma",
       role: "Web Developer",
       image: "https://via.placeholder.com/200x200",
       about:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "",
     },
     {
       name: "Devansh Verma",
       role: "Web Designer",
       image: "https://via.placeholder.com/200x200",
       about:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "",
     },
     {
       name: "Tanisha Bansal",
       role: "Content Strategist",
       image: "https://via.placeholder.com/200x200",
       about:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "",
     },
     {
       name: "Aman Gupta",
       role: "Marketing Head",
       image: "https://via.placeholder.com/200x200",
       about:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "",
     },
     {
       name: "Kriti Singh",
       role: "UI/UX Designer",
       image: "https://via.placeholder.com/200x200",
       about:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "",
     },
     {
       name: "Rohan Mehta",
       role: "App Developer",
       image: "https://via.placeholder.com/200x200",
       about:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "",
     },
 
   ];
