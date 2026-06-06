@@ -6,6 +6,10 @@ import { Link } from "react-router-dom";
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const handleJoinClick = () => {
+    window.open("https://forms.gle/81fXY1koiUhsJnng7", "_blank");
+  };
+
   return (
     <header className="navbar">
       <div className="logo">
@@ -15,7 +19,6 @@ function Navbar() {
         />
       </div>
 
-      {/* Hamburger Icon */}
       <div
         className={`hamburger ${menuOpen ? "active" : ""}`}
         onClick={() => setMenuOpen(!menuOpen)}
@@ -25,35 +28,24 @@ function Navbar() {
         <span></span>
       </div>
 
-      {/* Nav Links */}
       <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
-  <Link to="/">Home</Link>
-  <Link to="/weeho-details">About</Link>
-  <Link to="/our-team">Our Team</Link>
-  <Link to="/blogs">Blog</Link>
-          <Link to="/contact">Contact</Link>
+        <Link to="/">Home</Link>
+        <Link to="/weeho-details">About</Link>
+        <Link to="/our-team">Our Team</Link>
+        <Link to="/blogs">Blog</Link>
+        <Link to="/contact">Contact</Link>
 
-</nav>
+        <div className="mobile-cta">
+          <button className="btn login-btn" onClick={handleJoinClick}>
+            Join As A Performer
+          </button>
+        </div>
+      </nav>
 
-
-      {/* Buttons */}
-      <div className="nav-buttons">
-        <button
-          className="btn login-btn"
-          onClick={() =>
-            window.open("https://forms.gle/81fXY1koiUhsJnng7", "_blank")
-          }
-        >
+      <div className="nav-buttons desktop-cta">
+        <button className="btn login-btn" onClick={handleJoinClick}>
           Join As A Performer
         </button>
-        {/*<button*/}
-        {/*  className="btn signup-btn"*/}
-        {/*  onClick={() =>*/}
-        {/*    window.open("https://forms.gle/JqDMVxuxpYvHq34V8", "_blank")*/}
-        {/*  }*/}
-        {/*>*/}
-        {/*  Book An Event*/}
-        {/*</button>*/}
       </div>
     </header>
   );
