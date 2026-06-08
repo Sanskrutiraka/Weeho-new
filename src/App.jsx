@@ -10,6 +10,7 @@ import Navbar from "./Components/Navbar";
 
 import Stats from "./Components/Stats";
 import Event_Types from "./Components/Event_Types";
+import OnlineEvents from "./Components/OnlineEvents";
 import UniqueEventSlider from "./Components/UniqueEventSlider";
 
 
@@ -56,6 +57,7 @@ function App() {
             <Header />
 
                 <Event_Types />
+            <OnlineEvents />
               <Performers />
             <div id="events-section">
                 <UniqueEventSlider />
